@@ -1,6 +1,6 @@
 /*!
  * SAP UI development toolkit for HTML5 (SAPUI5/OpenUI5)
- * (c) Copyright 2009-2014 SAP SE or an SAP affiliate company.
+ * (c) Copyright 2009-2015 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
 /* Global CSS for 'base' theme */
@@ -113,6 +113,19 @@ button.sapUiUx3ActionBarLiteMoreButton:focus > span.sapUiBtnTxt {
 .sapUiUx3ActionBarUpdateAction:focus {
   background-image: url("img/update_hover.png");
   background-color: #111177;
+}
+.sapUiUx3ActionBarUpdateAction.Selected {
+  background-image: url("img/update_hover.png");
+  background-color: #0b0b4a;
+}
+.sapUiUx3ActionBarUpdateAction.Selected:hover {
+  background-color: #111177;
+}
+.sapUiUx3ActionBarUpdateAction.Selected:active {
+  background-color: #a9a9a9;
+}
+.sapUiUx3ActionBarUpdateAction.Selected:focus {
+  background-color: #a9a9a9;
 }
 .sapUiUx3ActionBarUpdatePopup.sapUiUx3TP {
   color: #000000;
