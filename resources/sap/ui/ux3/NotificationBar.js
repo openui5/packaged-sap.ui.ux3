@@ -23,7 +23,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/delegate
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.26.3
+	 * @version 1.26.4
 	 *
 	 * @constructor
 	 * @public
@@ -356,6 +356,17 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/delegate
 			}
 	
 		};
+		
+		var fnSortMessages = function(that, oNotifier) {
+			var aSortMessages = oNotifier.getMessages().concat([]);
+			if (aSortMessages.length > 0) {
+				// sort ascending the messages via their level
+				aSortMessages.sort(sap.ui.core.Message.compareByType);
+
+				var iIndex = aSortMessages.length - 1;
+				that._sSeverestMessageLevel = aSortMessages[iIndex].getLevel();
+			}
+		};
 	
 		/**
 		 * This is the eventListener of the NotificationBar. All triggered events
@@ -376,14 +387,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/delegate
 	
 				if (this.getMessageNotifier() && this.getMessageNotifier().getId() === oNotifier.getId()) {
 					// clone the message array to sort it
-					var aSortMessages = oNotifier.getMessages().concat([]);
-					if (aSortMessages.length > 0) {
-						// sort ascending the messages via their level
-						aSortMessages.sort(sap.ui.core.Message.compareByType);
-	
-						var iIndex = aSortMessages.length - 1;
-						this._sSeverestMessageLevel = aSortMessages[iIndex].getLevel();
-					}
+					fnSortMessages(this, this.getMessageNotifier());
 				}
 	
 				if (fnChangeVisibility(this)) {
@@ -1035,7 +1039,10 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/delegate
 				$messageCount.removeClass("sapUiMessageSuccess");
 				$messageCount.removeClass("sapUiMessageWarning");
 				$messageCount.removeClass("sapUiMessageError");
-	
+
+				// re-sort the messages and re-calc the severity level because they could have been changed 
+				// if the NotiBar was invisible
+				fnSortMessages(oThis, oMN);
 				// add new corresponding class
 				var sLvl = oThis._sSeverestMessageLevel;
 				$messageCount.addClass("sapUiMessage" + sLvl);
