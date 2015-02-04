@@ -127,10 +127,10 @@ button.sapUiUx3ActionBarLiteMoreButton:focus > span.sapUiBtnTxt {
   background-color: #7a5100;
 }
 .sapUiUx3ActionBarUpdateAction.Selected:active {
-  background-color: #7a5100;
+  background-color: #000000;
 }
 .sapUiUx3ActionBarUpdateAction.Selected:focus {
-  background-color: #7a5100;
+  background-color: #000000;
 }
 .sapUiUx3ActionBarUpdatePopup.sapUiUx3TP {
   color: #ffffff;
@@ -153,7 +153,7 @@ button.sapUiUx3ActionBarLiteMoreButton:focus > span.sapUiBtnTxt {
 }
 .sapUiUx3ActionBarFollowAction.Default:active {
   background-image: url("img-RTL/not_following_hover.png");
-  background-color: #7a5100;
+  background-color: #000000;
 }
 .sapUiUx3ActionBarFollowAction.Default:focus {
   border: 1px solid #7a5100;
@@ -169,10 +169,10 @@ button.sapUiUx3ActionBarLiteMoreButton:focus > span.sapUiBtnTxt {
   background-color: #7a5100;
 }
 .sapUiUx3ActionBarFollowAction.Follow:active {
-  background-color: #7a5100;
+  background-color: #000000;
 }
 .sapUiUx3ActionBarFollowAction.Follow:focus {
-  background-color: #7a5100;
+  background-color: #000000;
 }
 .sapUiUx3ActionBarFollowAction.Hold {
   background-image: url("img-RTL/hold_hover.png");
@@ -182,10 +182,10 @@ button.sapUiUx3ActionBarLiteMoreButton:focus > span.sapUiBtnTxt {
   background-color: #7a5100;
 }
 .sapUiUx3ActionBarFollowAction.Hold:active {
-  background-color: #7a5100;
+  background-color: #000000;
 }
 .sapUiUx3ActionBarFollowAction.Hold:focus {
-  background-color: #7a5100;
+  background-color: #000000;
 }
 /* ============================================= */
 /* Flag                                     */
@@ -205,7 +205,7 @@ button.sapUiUx3ActionBarLiteMoreButton:focus > span.sapUiBtnTxt {
 }
 .sapUiUx3ActionBarFlagAction:active {
   background-image: url("img-RTL/flag_hover.png");
-  background-color: #7a5100;
+  background-color: #000000;
 }
 .sapUiUx3ActionBarFlagAction.Selected {
   background-image: url("img-RTL/flag_hover.png");
@@ -215,10 +215,10 @@ button.sapUiUx3ActionBarLiteMoreButton:focus > span.sapUiBtnTxt {
   background-color: #ff0000;
 }
 .sapUiUx3ActionBarFlagAction.Selected:active {
-  background-color: #7a5100;
+  background-color: #000000;
 }
 .sapUiUx3ActionBarFlagAction.Selected:focus {
-  background-color: #7a5100;
+  background-color: #000000;
 }
 /* ============================================= */
 /* Favorite                                     */
@@ -238,7 +238,7 @@ button.sapUiUx3ActionBarLiteMoreButton:focus > span.sapUiBtnTxt {
 }
 .sapUiUx3ActionBarFavoriteAction:active {
   background-image: url("img-RTL/favorite_hover.png");
-  background-color: #7a5100;
+  background-color: #000000;
 }
 .sapUiUx3ActionBarFavoriteAction.Selected {
   background-image: url("img-RTL/favorite_hover.png");
@@ -248,10 +248,10 @@ button.sapUiUx3ActionBarLiteMoreButton:focus > span.sapUiBtnTxt {
   background-color: #ffffff;
 }
 .sapUiUx3ActionBarFavoriteAction.Selected:active {
-  background-color: #7a5100;
+  background-color: #000000;
 }
 .sapUiUx3ActionBarFavoriteAction.Selected:focus {
-  background-color: #7a5100;
+  background-color: #000000;
 }
 /* ============================================= */
 /* Open Thing                                    */
@@ -474,7 +474,7 @@ button.sapUiBtnS.sapUiBtnNorm.sapUiUx3EditCollectionButton.sapUiBtnStd:hover {
   color: #ffffff;
 }
 .sapUiUx3DSSVSelected {
-  background-color: #7a5100;
+  background-color: #000000;
 }
 .sapUiUx3DSSVItem {
   width: 100%;
@@ -484,7 +484,7 @@ button.sapUiBtnS.sapUiBtnNorm.sapUiUx3EditCollectionButton.sapUiBtnStd:hover {
   width: auto;
 }
 .sapUiUx3DSSVItem:hover {
-  background-color: #7a5100;
+  background-color: #000000;
 }
 .sapUiUx3DSSVSA {
   overflow-y: auto;
@@ -1755,7 +1755,7 @@ li.sapUiInPlaceMessage > div.sapUiNotifierMessageText:focus {
   color: #000000;
 }
 .sapUiNotifierMessageCount.sapUiMessage.sapUiMessageError {
-  background-color: #ff0000;
+  background-color: #ffffff;
 }
 /* ========================================== */
 /* CSS for control sap.ui.ux3/Overlay.control */
@@ -2162,10 +2162,10 @@ html[data-sap-ui-browser^="ff"] .sapUiUx3ShellToolFontIcon {
   left: 0;
   margin: 0;
   box-sizing: border-box;
-  border-top: 1px solid #e09500;
+  border-top: 1px solid #333333;
   width: 40px;
   height: 120px;
-  color: #9a9a9a;
+  color: #ffffff;
   cursor: pointer;
   padding: 5px 0px 3px 0px;
   text-align: center;
@@ -2551,7 +2551,7 @@ html[data-sap-ui-browser="ie8"] .sapUiUx3ShellCanvas {
   min-width: 332px;
 }
 .sapUiUx3TIContent {
-  background-color: #7a5100;
+  background-color: #000000;
   position: absolute;
   top: 29px;
   right: 29px;
@@ -3167,6 +3167,20 @@ html[dir=rtl] .sapUiUx3TPBtnRow {
 /* modal, bubble, bottom, top */
 /* modal, bubble, bottom, top */
 /* Toolbar Separator */
+/* ------------------------------------------------------------------- */
+/* Generic Mapping: not for usage in standard control development !!!! */
+/* ------------------------------------------------------------------- */
+/* Semantic Text Colors */
+/* Semantic Element Colors */
+/* Semantic Backgrounds */
+/* Background Brand */
+/* Text Colors */
+/* Border Colors */
+/* @sapUiLightBorder: @sapHCStandardFG; */
+/* @sapUiExtraLightBorder: @sapHCStandardFG; */
+/* Accent */
+/* Backgrounds Header/Footer */
+/* Background */
 /* This CSS inherits rules from default/shared.css */
 /* =========================================== */
 /* CSS for controlsap.ui.ux3/ActionBar.control */
@@ -3470,6 +3484,13 @@ button.sapUiUx3ActionBarLiteMoreButton:focus > span.sapUiBtnTxt {
 /* ==================================================== */
 .sapUiUx3DSSV {
   font-size: 11px;
+}
+/* change for matching */
+.sapUiUx3DSSVItem:hover {
+  background-color: #7a5100;
+}
+.sapUiUx3DSSVSelected {
+  background-color: #7a5100;
 }
 /* ======================================== */
 /* CSS for control sap.ui.ux3/Exact.control */
@@ -4036,6 +4057,9 @@ HTML[data-sap-ui-browser='ie8'] .sapUiNotifierCallout .sapUiCltArr.sapUiCltBaseA
 /* ================================================= */
 .sapUiUx3TI {
   font-size: 11px;
+}
+.sapUiUx3TIContent {
+  background-color: #7a5100;
 }
 /* ================================================= */
 /* CSS for control sap.ui.ux3/ThingInspector.control */
