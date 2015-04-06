@@ -20,7 +20,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/delegate
 	 * @class
 	 * CollectionInspector
 	 * @extends sap.ui.core.Control
-	 * @version 1.26.9
+	 * @version 1.26.10
 	 *
 	 * @constructor
 	 * @public
