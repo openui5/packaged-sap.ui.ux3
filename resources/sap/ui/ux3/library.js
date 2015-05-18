@@ -20,14 +20,14 @@ sap.ui.define(['jquery.sap.global',
 	 * @namespace
 	 * @name sap.ui.ux3
 	 * @author SAP SE
-	 * @version 1.28.5
+	 * @version 1.28.6
 	 * @public
 	 */
 	
 	// delegate further initialization of this library to the Core
 	sap.ui.getCore().initLibrary({
 		name : "sap.ui.ux3",
-		version: "1.28.5",
+		version: "1.28.6",
 		dependencies : ["sap.ui.core","sap.ui.commons"],
 		types: [
 			"sap.ui.ux3.ActionBarSocialActions",
@@ -387,4 +387,4 @@ sap.ui.define(['jquery.sap.global',
 
 	return sap.ui.ux3;
 
-}, /* bExport= */ false);
+});
