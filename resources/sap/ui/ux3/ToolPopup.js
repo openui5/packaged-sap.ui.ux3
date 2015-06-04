@@ -26,7 +26,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/IconPool
 	 * @implements sap.ui.core.PopupInterface
 	 *
 	 * @author SAP SE
-	 * @version 1.28.8
+	 * @version 1.28.9
 	 *
 	 * @constructor
 	 * @public
@@ -451,7 +451,9 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/IconPool
 		}
 
 		if (!this._sResizeID) {
-			this._sResizeID = sap.ui.core.ResizeHandler.register(this, this._proxyOnResize);
+			// registering the ResizeHandler for the content of the tollPopup removes the issue with
+			// the never ending change of height of the toolPopup when it is resized once.
+			this._sResizeID = sap.ui.core.ResizeHandler.register(this.$('content'), this._proxyOnResize);
 		}
 
 		// forward the Popup's opened event accordingly
