@@ -1,5 +1,5 @@
 /*!
- * SAP UI development toolkit for HTML5 (SAPUI5/OpenUI5)
+ * UI development toolkit for HTML5 (OpenUI5)
  * (c) Copyright 2009-2015 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
  */
@@ -26,7 +26,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/IconPool
 	 * @implements sap.ui.core.PopupInterface
 	 *
 	 * @author SAP SE
-	 * @version 1.26.11
+	 * @version 1.26.13
 	 *
 	 * @constructor
 	 * @public
@@ -507,8 +507,16 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/IconPool
 
 		if (!this._sInitialFocusId) {
 			var sInitFocusId = fnGetInitialFocus(this);
-			var oControl = jQuery.sap.byId(sInitFocusId);
-			oControl.focus();
+
+			// Compare the initial focus id with the current focus that is
+			// stored in the FocusHandler in the core.
+			// If the initial focus was set properly already by the Popup
+			// don't focus twice. Because Internet Explorer will be confused with
+			// two focusin and focusout events
+			if (sInitFocusId !== sap.ui.getCore().getCurrentFocusedControlId()) {
+				var oControl = jQuery.sap.byId(sInitFocusId);
+				oControl.focus();
+			}
 		}
 
 		// forward the Popup's opened event accordingly
