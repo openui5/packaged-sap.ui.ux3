@@ -27,7 +27,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/IconPool
 		 *
 		 * @namespace
 		 * @author SAP SE
-		 * @version 1.32.5
+		 * @version 1.32.6
 		 *
 		 * @constructor
 		 * @public
@@ -311,18 +311,6 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/IconPool
 				}
 
 				return that._sInitialFocusId;
-			};
-
-			/**
-			 * Determines the focus DOM reference.
-			 *
-			 * @returns {string}
-			 * @private
-			 */
-			ToolPopup.prototype.getFocusDomRef = function () {
-				// always determine the best initial focus stuff because content might
-				// have changed in the meantime
-				return fnGetInitialFocus(this);
 			};
 
 			/**
