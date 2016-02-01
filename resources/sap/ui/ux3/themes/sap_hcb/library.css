@@ -1967,30 +1967,35 @@ li.sapUiInPlaceMessage > div.sapUiNotifierMessageText:focus {
   background-color: #ffffff;
   border: none;
 }
-.sapUiUx3ShellHeader > img {
+.sapUiUx3ShellHeader > .sapUiUx3ShellHeaderTitleLeft {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 3px;
+}
+.sapUiUx3ShellHeader > .sapUiUx3ShellHeaderTitleLeft > span {
+  font-size: 0.75rem;
+  font-weight: bold;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.sapUiUx3ShellHeader > .sapUiUx3ShellHeaderTitleLeft > img {
   /* the logo image */
   vertical-align: top;
   max-height: 18px;
   margin-right: 3px;
+  margin-top: -3px;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
 }
-.sapUiUx3ShellHeader.sapUiUx3ShellHeaderFlex > img {
+.sapUiUx3ShellHeader.sapUiUx3ShellHeaderFlex > .sapUiUx3ShellHeaderTitleLeft > img {
   max-height: 40px;
 }
-.sapUiUx3ShellHeader > h1 {
-  font-size: 12px;
-  display: inline-block;
-  margin: 0;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
 .sapUiUx3ShellHeader .sapUiUx3ShellHeaderTitleRight {
-  position: absolute;
-  right: 20px;
-  font-weight: normal;
+  float: right;
 }
 .sapUiUx3ShellBlockHeaderAccess .sapUiUx3ShellHeaderTitleRight {
   display: none;
@@ -2398,7 +2403,7 @@ html[data-sap-ui-browser="ie8"] .sapUiUx3ShellCanvas {
   height: 8px;
   padding: 0;
 }
-.sapUiUx3Shell.sapUiUx3ShellHeadBrandOnly > .sapUiUx3ShellHeader > img,
+.sapUiUx3Shell.sapUiUx3ShellHeadBrandOnly > .sapUiUx3ShellHeader > span > img,
 .sapUiUx3Shell.sapUiUx3ShellHeadBrandOnly > .sapUiUx3ShellHeader > h1,
 .sapUiUx3Shell.sapUiUx3ShellHeadBrandOnly > .sapUiUx3ShellHeader > span,
 .sapUiUx3Shell.sapUiUx3ShellHeadBrandOnly > .sapUiUx3ShellWorksetBar,
@@ -3090,9 +3095,9 @@ html[data-sap-ui-browser="ie8"] .sapUiUx3ShellCanvas {
 }
 .sapUiUx3TPArrow {
   position: absolute;
-  width: 13px;
-  height: 20px;
-  left: -13px;
+  width: 12px;
+  height: 18px;
+  left: -12px;
 }
 .sapUiUx3TPArrowLeft {
   background-image: url(img/toolpopup/arrow_left.png);
@@ -3102,7 +3107,7 @@ html[data-sap-ui-browser="ie8"] .sapUiUx3ShellCanvas {
   background-image: url(img/toolpopup/arrow_left_inverted.png);
 }
 .sapUiUx3TPArrowRight {
-  right: -13px;
+  right: -12px;
   background-image: url(img/toolpopup/arrow_right.png);
 }
 .sapUiUx3TPArrowRight.sapUiTPInverted {
@@ -3110,9 +3115,9 @@ html[data-sap-ui-browser="ie8"] .sapUiUx3ShellCanvas {
 }
 .sapUiUx3TPArrowUp {
   left: 10px;
-  top: -13px;
-  width: 20px;
-  height: 13px;
+  top: -12px;
+  width: 18px;
+  height: 12px;
   background-image: url(img/toolpopup/arrow_up.png);
 }
 .sapUiUx3TPArrowUp.sapUiTPInverted {
@@ -3120,9 +3125,9 @@ html[data-sap-ui-browser="ie8"] .sapUiUx3ShellCanvas {
 }
 .sapUiUx3TPArrowDown {
   left: 10px;
-  bottom: -13px;
-  width: 20px;
-  height: 13px;
+  bottom: -12px;
+  width: 18px;
+  height: 12px;
   background-image: url(img/toolpopup/arrow_down.png);
 }
 .sapUiUx3TPArrowDown.sapUiTPInverted {
@@ -3976,6 +3981,12 @@ HTML[data-sap-ui-browser='ie8'] .sapUiNotifierCallout .sapUiCltArr.sapUiCltBaseA
 .sapUiUx3ShellHeader {
   border-bottom: 1px solid #ffffff;
   background-color: #000000;
+}
+.sapUiUx3ShellHeader > .sapUiUx3ShellHeaderTitleLeft {
+  padding-top: 0;
+}
+.sapUiUx3ShellHeader > .sapUiUx3ShellHeaderTitleLeft > img {
+  margin-top: 0;
 }
 .sapUiUx3ShellPaneEntry {
   color: #ffffff;
