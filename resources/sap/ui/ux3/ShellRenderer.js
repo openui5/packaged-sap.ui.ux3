@@ -111,12 +111,12 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/IconPool'],
 
 		ShellRenderer.renderFacetBar(rm, oControl);
 
-		rm.write("<article class='sapUiUx3ShellContent' id='" + sId + "-content' role='main' data-sap-ui-fastnavgroup='true'>");
+		rm.write("<article class='sapUiUx3ShellContent' id='" + sId + "-content' role='main' data-sap-ui-fastnavgroup='true'><div>");
 		var aContent = oControl.getContent();
 		for (var i = 0; i < aContent.length; i++) {
 			rm.renderControl(aContent[i]);
 		}
-		rm.write("</article><div class='sapUiUx3ShellNotifySpace'></div></div>");
+		rm.write("</div></article><div class='sapUiUx3ShellNotifySpace'></div></div>");
 
 
 
@@ -176,25 +176,10 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/IconPool'],
 		var rb = sap.ui.getCore().getLibraryResourceBundle("sap.ui.ux3");
 
 		var appIcon = oControl.getAppIcon();
-		rm.write("<hr id='" + oControl.getId() + "-hdrLine'/><img id='" + oControl.getId() + "-logoImg' src='");
-		if (appIcon) {
-			rm.writeEscaped(oControl.getAppIcon());
-		} else {
-			var sImage = sap.ui.core.theming.Parameters._getThemeImage('sapUiUx3ShellApplicationImageURL', true);
-			rm.writeEscaped(sImage);
-		}
-		rm.write("'");
+		rm.write("<hr id='" + oControl.getId() + "-hdrLine'/>");
 
-		var iconTooltip = oControl.getAppIconTooltip() || rb.getText("SHELL_LOGO");
-		rm.writeAttributeEscaped("alt", iconTooltip);
-		rm.writeAttributeEscaped("title", iconTooltip);
-
-		rm.write("><h1");
-		rm.writeAttributeEscaped("title", oControl.getAppTitle());
-		rm.write(">");
-		rm.writeEscaped(oControl.getAppTitle());
-
-		rm.write("</h1><span id='" + oControl.getId() + "-hdr-items' class='sapUiUx3ShellHeaderTitleRight'>");
+		//right part
+		rm.write("<span id='" + oControl.getId() + "-hdr-items' class='sapUiUx3ShellHeaderTitleRight'>");
 
 		// header-right-items
 		var aHeaderItems = oControl.getHeaderItems();
@@ -220,6 +205,34 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/IconPool'],
 			rm.write(oControl.getLogoutButtonTooltip() ? jQuery.sap.encodeHTML(oControl.getLogoutButtonTooltip()) : rb.getText("SHELL_LOGOUT"));
 			rm.write("' tabindex='0' role='button' class='sapUiUx3ShellHeaderButton sapUiUx3ShellHeader-logout'></a>");
 		}
+		rm.write("</span>");
+
+		//left part
+		rm.write("<span class='sapUiUx3ShellHeaderTitleLeft' ");
+		rm.writeAttributeEscaped("title", oControl.getAppTitle());
+		rm.write(">");
+
+		//img
+		rm.write("<img id='" + oControl.getId() + "-logoImg' src='");
+		if (appIcon) {
+			rm.writeEscaped(oControl.getAppIcon());
+		} else {
+			var sImage = sap.ui.core.theming.Parameters._getThemeImage('sapUiUx3ShellApplicationImageURL', true);
+			rm.writeEscaped(sImage);
+		}
+		rm.write("'");
+
+		var iconTooltip = oControl.getAppIconTooltip() || rb.getText("SHELL_LOGO");
+		rm.writeAttributeEscaped("alt", iconTooltip);
+		rm.writeAttributeEscaped("title", iconTooltip);
+
+		rm.write(">");
+
+		//title text
+		rm.write("<span>");
+		rm.writeEscaped(oControl.getAppTitle());
+		rm.write("</span>");
+
 		rm.write("</span>");
 	};
 
