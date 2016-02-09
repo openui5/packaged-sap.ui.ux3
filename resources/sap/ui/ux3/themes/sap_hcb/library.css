@@ -3084,9 +3084,9 @@ html[data-sap-ui-browser="ie8"] .sapUiUx3ShellCanvas {
 }
 .sapUiUx3TPArrow {
   position: absolute;
-  width: 13px;
-  height: 20px;
-  left: -13px;
+  width: 12px;
+  height: 18px;
+  left: -12px;
 }
 .sapUiUx3TPArrowLeft {
   background-image: url(img/toolpopup/arrow_left.png);
@@ -3096,7 +3096,7 @@ html[data-sap-ui-browser="ie8"] .sapUiUx3ShellCanvas {
   background-image: url(img/toolpopup/arrow_left_inverted.png);
 }
 .sapUiUx3TPArrowRight {
-  right: -13px;
+  right: -12px;
   background-image: url(img/toolpopup/arrow_right.png);
 }
 .sapUiUx3TPArrowRight.sapUiTPInverted {
@@ -3104,9 +3104,9 @@ html[data-sap-ui-browser="ie8"] .sapUiUx3ShellCanvas {
 }
 .sapUiUx3TPArrowUp {
   left: 10px;
-  top: -13px;
-  width: 20px;
-  height: 13px;
+  top: -12px;
+  width: 18px;
+  height: 12px;
   background-image: url(img/toolpopup/arrow_up.png);
 }
 .sapUiUx3TPArrowUp.sapUiTPInverted {
@@ -3114,9 +3114,9 @@ html[data-sap-ui-browser="ie8"] .sapUiUx3ShellCanvas {
 }
 .sapUiUx3TPArrowDown {
   left: 10px;
-  bottom: -13px;
-  width: 20px;
-  height: 13px;
+  bottom: -12px;
+  width: 18px;
+  height: 12px;
   background-image: url(img/toolpopup/arrow_down.png);
 }
 .sapUiUx3TPArrowDown.sapUiTPInverted {
