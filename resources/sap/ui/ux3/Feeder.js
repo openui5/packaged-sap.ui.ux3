@@ -23,7 +23,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/commons/Button', 'sap/ui/core/Contro
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.32.11
+	 * @version 1.32.12
 	 *
 	 * @constructor
 	 * @public
@@ -235,7 +235,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/commons/Button', 'sap/ui/core/Contro
 				if (node.nodeType === 3 || node.nodeType === 4) {
 
 					// ignore non-breakable space in IE
-					if (!(!!sap.ui.Device.browser.internet_explorer && node.nodeValue === '\xA0')) {
+					if (!((!!sap.ui.Device.browser.internet_explorer || !!sap.ui.Device.browser.edge) && node.nodeValue === '\xA0')) {
 						sText += node.nodeValue.replace(/\n/g, ''); // filter out line breaks in text-nodes
 					}
 				}
@@ -254,7 +254,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/commons/Button', 'sap/ui/core/Contro
 					}
 
 					// do not add a newline if no text was found until now (IE)
-					if (!(!!sap.ui.Device.browser.internet_explorer && sText === '') &&
+					if (!((!!sap.ui.Device.browser.internet_explorer || !!sap.ui.Device.browser.edge) && sText === '') &&
 
 						// same as above but only for <P> and webkit/mozilla
 						!((!!sap.ui.Device.browser.firefox || !!sap.ui.Device.browser.webkit) && sText === '' && node.nodeName ===  'P') &&
