@@ -27,7 +27,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/IconPool
 			 *
 			 * @namespace
 			 * @author SAP SE
-			 * @version 1.28.28
+			 * @version 1.28.29
 			 *
 			 * @constructor
 			 * @public
