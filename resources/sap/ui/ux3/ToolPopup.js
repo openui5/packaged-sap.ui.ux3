@@ -27,7 +27,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/IconPool
          *
          * @namespace
          * @author SAP SE
-         * @version 1.36.8
+         * @version 1.36.9
          *
          * @constructor
          * @public
@@ -327,9 +327,25 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/IconPool
              * @returns {Element|sap.ui.core.Element|Object|sap.ui.core.tmpl.Template}
              * @private
              */
-            function _fnGetFocusElementById(id) {
-                var domElement = sap.ui.getCore().byId(id);
-                return domElement;
+            function _fnGetFocusControlById(oToolPopup, id) {
+                var oControl,
+                    parent;
+
+                if (!id) {
+                    return null;
+                }
+
+                oControl = sap.ui.getCore().byId(id);
+
+                while (!oControl && oControl !== oToolPopup) {
+                    if (!id || !document.getElementById(id)) {
+                        return null;
+                    }
+                    parent = document.getElementById(id).parentNode;
+                    id = parent.id;
+                    oControl = sap.ui.getCore().byId(id);
+                }
+                return oControl;
             }
 
             /**
@@ -340,7 +356,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/IconPool
              */
             ToolPopup.prototype.getFocusDomRef = function () {
                 var domRefId;
-                var focusElement = _fnGetFocusElementById(this._sInitialFocusId);
+                var focusElement = _fnGetFocusControlById(this, this._sInitialFocusId);
 
                 // always determine the best initial focus stuff because content might
                 // have changed in the mean time
@@ -348,7 +364,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/IconPool
                 if (!focusElement) {
                     this._bFocusSet = false;
                     domRefId = _fnGetInitialFocus(this);
-                    focusElement = _fnGetFocusElementById(domRefId);
+                    focusElement = _fnGetFocusControlById(this, domRefId);
                 }
 
                 return focusElement ? focusElement.getDomRef() : this.getDomRef();
