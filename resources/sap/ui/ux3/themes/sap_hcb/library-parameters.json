@@ -675,7 +675,7 @@
     "sapUiMarginMedium": "2rem",
     "sapUiMarginLarge": "3rem",
     "sapUiEscapedEmptyString": "",
-    "sapUiFeedPersonPlaceholder": "/img/feed/person_placeholder_48.png",
+    "sapUiFeedPersonPlaceholder": "url(\"../base/img/feed/person_placeholder_48.png\")",
     "sapHCStandardBG": "#000000",
     "sapHCHighlightBG": "#7a5100",
     "sapHCHighlightAltBG": "#0f5d94",
