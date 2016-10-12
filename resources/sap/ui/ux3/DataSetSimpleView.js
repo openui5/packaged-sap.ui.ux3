@@ -21,7 +21,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/ResizeHa
 	 * DataSetSimpleView provides a simple view example for DataSet usage.
 	 * @extends sap.ui.core.Control
 	 * @implements sap.ui.ux3.DataSetView
-	 * @version 1.38.8
+	 * @version 1.38.9
 	 *
 	 * @constructor
 	 * @public
@@ -216,14 +216,21 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/ResizeHa
 	 * @protected
 	 */
 	DataSetSimpleView.prototype.updateView = function(aDiff) {
+		var i;
 		//if view is not rendered no Dom update is necessary
 		if (!this.getDomRef()) {
+			//just delete all items marked for delete
+			for (i = 0; i < aDiff.length; i++) {
+				if (aDiff[i].type === "delete") {
+					aDiff[i].item.destroy();
+				}
+			}
 			return;
 		}
 		var rm = sap.ui.getCore().createRenderManager(),
 			iLastLength = this.items.length;
 
-		for (var i = 0; i < aDiff.length; i++) {
+		for (i = 0; i < aDiff.length; i++) {
 			var oItem = aDiff[i].item;
 			var iIndex = aDiff[i].index;
 
