@@ -20,7 +20,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Element', './library'],
 	 * @class
 	 * DataSet Item
 	 * @extends sap.ui.core.Element
-	 * @version 1.40.16
+	 * @version 1.40.17
 	 *
 	 * @constructor
 	 * @public
