@@ -282,9 +282,12 @@ html[data-sap-ui-browser^="ie"] .sapUiUx3ExactLstLst {
 }
 
 .sapUiUx3ExactLstCollapsed > .sapUiUx3ExactLstHead > .sapUiUx3ExactLstHeadTxt {
+	transform:rotate(270deg);
+	-moz-transform: rotate(270deg);
 	-webkit-transform:rotate(270deg);
 	-webkit-transform-origin: 0 0;
 	-ms-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
 	background-color: transparent;
 	bottom: -20px;
 	left: -1px;
@@ -296,6 +299,7 @@ html[dir=rtl] .sapUiUx3ExactLstCollapsed > .sapUiUx3ExactLstHead > .sapUiUx3Exac
 	left: 22px; /*should be right -> swapped with right by RTL transformation*/
 	-webkit-transform-origin: 0% 100%; /*should be '100% 100%' -> swapped with right by RTL transformation*/
 	-ms-transform-origin: 0% 100%; /*should be '100% 100%' -> swapped with right by RTL transformation*/
+	-moz-transform-origin: 0% 100%;
 }
 
 /* Content */
