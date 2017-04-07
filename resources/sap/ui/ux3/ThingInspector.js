@@ -20,7 +20,7 @@ sap.ui.define(['jquery.sap.global', './ActionBar', './Overlay', './ThingViewer',
 	 * @class
 	 * Thing Inspector
 	 * @extends sap.ui.ux3.Overlay
-	 * @version 1.40.17
+	 * @version 1.40.18
 	 *
 	 * @constructor
 	 * @public

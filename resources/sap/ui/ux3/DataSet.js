@@ -20,7 +20,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/ResizeHa
 	 * @class
 	 * DataSet
 	 * @extends sap.ui.core.Control
-	 * @version 1.40.17
+	 * @version 1.40.18
 	 *
 	 * @constructor
 	 * @public
