@@ -20,7 +20,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Element', 'sap/ui/model/Selecti
 	 * @class
 	 * Collection
 	 * @extends sap.ui.core.Element
-	 * @version 1.52.7
+	 * @version 1.52.8
 	 *
 	 * @constructor
 	 * @public
