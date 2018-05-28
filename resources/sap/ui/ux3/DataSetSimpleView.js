@@ -35,7 +35,7 @@ sap.ui.define([
 	 * DataSetSimpleView provides a simple view example for DataSet usage.
 	 * @extends sap.ui.core.Control
 	 * @implements sap.ui.ux3.DataSetView
-	 * @version 1.56.0
+	 * @version 1.56.1
 	 *
 	 * @constructor
 	 * @public
