@@ -21,7 +21,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/ResizeHa
 	 * DataSetSimpleView provides a simple view example for DataSet usage.
 	 * @extends sap.ui.core.Control
 	 * @implements sap.ui.ux3.DataSetView
-	 * @version 1.38.36
+	 * @version 1.38.37
 	 *
 	 * @constructor
 	 * @public
@@ -457,7 +457,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Control', 'sap/ui/core/ResizeHa
 	 * @private
 	 */
 	DataSetSimpleView.prototype.calculateItemCounts = function(){
-		if (this.getDomRef()) {
+		if (this.getDomRef() && sap.ui.getCore().isThemeApplied()) {
 			var $itemArea = this.$(),
 				$firstItem = $itemArea.children().first();
 
