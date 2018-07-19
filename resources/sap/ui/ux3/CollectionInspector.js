@@ -26,7 +26,7 @@ sap.ui.define([
 	 * @class
 	 * CollectionInspector
 	 * @extends sap.ui.core.Control
-	 * @version 1.56.3
+	 * @version 1.56.4
 	 *
 	 * @constructor
 	 * @public
