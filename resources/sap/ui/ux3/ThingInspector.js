@@ -27,7 +27,7 @@ sap.ui.define([
 	 * @class
 	 * Thing Inspector
 	 * @extends sap.ui.ux3.Overlay
-	 * @version 1.56.5
+	 * @version 1.56.6
 	 *
 	 * @constructor
 	 * @public
