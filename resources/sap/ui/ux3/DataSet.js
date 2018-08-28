@@ -26,7 +26,7 @@ sap.ui.define([
 	 * @class
 	 * DataSet
 	 * @extends sap.ui.core.Control
-	 * @version 1.58.0
+	 * @version 1.58.1
 	 *
 	 * @constructor
 	 * @public
