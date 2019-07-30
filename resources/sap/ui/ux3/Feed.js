@@ -22,7 +22,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/commons/DropdownBox', 'sap/ui/common
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.52.30
+	 * @version 1.52.31
 	 *
 	 * @constructor
 	 * @public
